@@ -1,0 +1,34 @@
+# 离线试跑配置：不需要代理、不需要真实账号。
+#
+#   python -m amz_harness doctor   -c config/demo.toml
+#   python -m amz_harness env-up   -c config/demo.toml
+#   python -m amz_harness poll     -c config/demo.toml --kinds orders,inventory
+#
+# 目的：先让人把流程跑顺、把并发护栏看明白，再去碰真实账号。
+# 真实接单请复制 harness.toml（require_proxy = true）并把代理配齐。
+
+[harness]
+profiles_dir = "profiles-demo"
+runs_dir = "runs-demo"
+global_concurrency = 2
+headless = false
+require_proxy = false          # 仅演示用：真实多账号必须一账号一 IP
+
+[site_switcher]
+mode = "navigate"
+
+[accounts.demo_us]
+email = "demo-us@example.com"
+home_site = "US"
+sites = ["US", "CA", "MX"]
+min_seconds_between_jobs = 5
+max_actions_per_hour = 120
+notes = "离线试跑账号，没有真实站点凭据"
+
+[accounts.demo_eu]
+email = "demo-eu@example.com"
+home_site = "DE"
+sites = ["DE", "FR", "IT"]
+min_seconds_between_jobs = 8
+max_actions_per_hour = 60
+notes = "离线试跑账号，没有真实站点凭据"

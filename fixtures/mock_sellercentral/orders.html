@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Orders</title></head>
+<body>
+  <nav id="sc-navbar" class="seller-nav" data-marker="seller-nav">
+    <a href="/home">Home</a><a href="/orders-v3/order/">Orders</a>
+  </nav>
+  <h1>Orders</h1>
+
+  <!-- 干扰表：评分时应该被淘汰掉（表头匹配不到任何字段） -->
+  <table id="summary-table">
+    <tr><th>项目</th><th>数值</th></tr>
+    <tr><td>待发货</td><td>3</td></tr>
+    <tr><td>已发货</td><td>12</td></tr>
+  </table>
+
+  <!-- 目标表：表头是中文后台口径（中国卖家运营美国站的真实形态） -->
+  <table id="orders-table" data-marker="orders-table">
+    <thead>
+      <tr>
+        <th>订单编号</th>
+        <th>购买日期</th>
+        <th>订单状态</th>
+        <th>SKU</th>
+        <th>数量</th>
+        <th>商品总额</th>
+        <th>币种</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>113-1234567-8901234</td>
+        <td>2026-10-08T09:12:00+00:00</td>
+        <td>Pending</td>
+        <td>SKU-RED-L</td>
+        <td>1</td>
+        <td>29.99</td>
+        <td>USD</td>
+      </tr>
+      <tr>
+        <td>113-7654321-0987654</td>
+        <td>2026-10-08T11:45:00+00:00</td>
+        <td>Shipped</td>
+        <td>SKU-BLUE-M</td>
+        <td>2</td>
+        <td>59.98</td>
+        <td>USD</td>
+      </tr>
+      <tr>
+        <td>113-1111111-2222222</td>
+        <td>2026-10-09T02:03:00+00:00</td>
+        <td>Pending</td>
+        <td>SKU-GREEN-S</td>
+        <td>1</td>
+        <td>19.50</td>
+        <td>USD</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

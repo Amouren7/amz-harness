@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Amazon</title></head>
+<body>
+  <h1>Enter the characters you see below</h1>
+  <p>Sorry, we just need to make sure you're not a robot.</p>
+  <form action="/errors/validateCaptcha" method="post">
+    <img src="/captcha.png" alt="captcha">
+    <input id="captchacharacters" name="captchacharacters" autocomplete="off">
+    <button type="submit">Continue shopping</button>
+  </form>
+</body>
+</html>

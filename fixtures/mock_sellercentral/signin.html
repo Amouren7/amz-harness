@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Amazon Sign-In</title></head>
+<body>
+  <div id="auth-portal">
+    <h1>Sign in</h1>
+    <!-- 表单 POST 到 /ap/mfa，模拟"密码通过后进入两步验证"。
+         刻意用 POST：真实登录表单是 POST，用 GET 会让密码进 URL 和浏览器历史，
+         那既不真实、也会把敏感信息漏进日志。 -->
+    <form name="signIn" action="/ap/mfa" method="post" data-marker="signin-form">
+      <label for="ap_email">Email or mobile phone number</label>
+      <input type="email" id="ap_email" name="email" autocomplete="username" required>
+
+      <label for="ap_password">Password</label>
+      <input type="password" id="ap_password" name="password" autocomplete="current-password" required>
+
+      <button id="signInSubmit" type="submit">Sign in</button>
+    </form>
+  </div>
+</body>
+</html>

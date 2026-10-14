@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Two-Step Verification</title></head>
+<body>
+  <h1>Two-Step Verification</h1>
+  <p>For your security, we need to verify your identity.</p>
+  <!-- 提交后进入后台（同样用 POST，避免验证码进 URL） -->
+  <form action="/home" method="post">
+    <label for="auth-mfa-otpcode">Enter the 6-digit code</label>
+    <input id="auth-mfa-otpcode" name="otpCode" autocomplete="one-time-code" inputmode="numeric" required>
+    <button id="auth-signin-button" type="submit">Sign in</button>
+  </form>
+  <p><a href="/ap/signin">Use a different account</a></p>
+</body>
+</html>

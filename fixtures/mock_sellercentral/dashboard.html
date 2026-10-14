@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Seller Central</title></head>
+<body>
+  <!-- 已登录的证据：卖家后台导航 + 站点切换器 -->
+  <nav id="sc-navbar" class="seller-nav" data-marker="seller-nav">
+    <a href="/home">Home</a>
+    <a href="/orders-v3/order/">Orders</a>
+    <a href="/inventory/">Inventory</a>
+    <a href="/reporting/">Reports</a>
+  </nav>
+
+  <div id="sc-mkt-switcher" data-marker="mkt-switcher">
+    <label for="marketplace">Marketplace</label>
+    <select id="marketplace" name="marketplace">
+      <option value="US">United States</option>
+      <option value="CA">Canada</option>
+      <option value="DE">Germany</option>
+    </select>
+  </div>
+
+  <main>
+    <h1>Seller Central</h1>
+    <p data-testid="today-summary">今日概览（mock 数据，非真实业务数据）</p>
+  </main>
+</body>
+</html>
